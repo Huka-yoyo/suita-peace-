@@ -1,0 +1,855 @@
+@charset "utf-8";
+
+/*
+html5doctor.com Reset Stylesheet
+v1.4
+2009-07-27
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, article,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:3; 
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, article {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/* End Reset CSS */
+
+html {
+    color: #54514c;
+}
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 0.4em;
+    background-color: #d1cfc2;
+    position: fixed;
+    top: 0;
+    z-index: 10
+}
+
+
+header .logo img {
+    margin: 0 auto;
+    padding: 0.5em 0 0.2em;
+    text-align: center;
+    width:300px
+}
+
+header h1 {
+    position: relative;
+    top: 0px;
+    left: 15px;
+}
+
+header nav {
+    box-sizing: border-box;
+    position: fixed;
+
+    display: none;
+    width: 100%;
+    height: 85%;
+    background: #fff1f1;
+    opacity: 0.9;
+    /* 3. スライドメニューの場合 */
+    display: block;
+    right: -100%;
+    transition: right .5s;
+    /* ここまで */
+}
+
+/* 3. スライドメニューの場合 */
+header nav.sp_open {
+    right: 0;
+}
+/* ここまで */
+
+header nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header nav ul li a {
+    display: block;
+    padding: 2px;
+    border-radius: 5px;
+    color: #666;
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: none;
+}
+#drawer_toggle {
+    z-index: 200;
+	box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+	display: inline-block;
+    width: 60px;
+    height:60px;
+} 
+
+#drawer_toggle span {
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    vertical-align: top;
+}
+#drawer_toggle span:nth-child(2) {
+    margin-top: 10px;
+}
+#drawer_toggle span:last-child {
+    margin-top: 20px;
+}
+#drawer_toggle.open span {
+    top: 49px;
+    left: 14px;
+    width: 35px;
+    margin: 0;
+}
+
+#drawer_toggle.open span:first-child {
+    transform: rotate(45deg);
+}
+#drawer_toggle.open span:nth-child(2) {
+    display: none;
+}
+#drawer_toggle.open span:last-child {
+    transform: rotate(-45deg);
+}
+main {
+    font-size: 1.6rem;
+}
+
+main h2 span {
+    display: none;
+}
+#key_visual {
+    width: 100%;
+    max-width: 1450px;
+    padding-top: 80px;
+    margin: 0 auto;
+    background-color: #d1cfc2;
+}
+#key_visual img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+#information ul {
+    list-style: none;
+    font-size: 1.4rem;
+}
+#information ul li {
+    padding: 5px 10px;
+}
+#information ul li:nth-child(even) {
+    background-color: #ffffff;
+}
+#information ul li time {
+    display: block;
+    margin: 30px;
+    font-size: 20px;
+}
+#information ul li p {
+    line-height: 1.5;
+}
+#information ul li p::before {
+    content: "▶︎";
+    margin-right: 5px;
+    font-size: 20px;
+    vertical-align: top;
+}
+#information ul li p {
+    font-size: 40px;
+
+}
+
+
+#information img{
+    width: 320px;
+    display: block;
+    float: left
+}
+#information time{
+    padding-left: 330px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: bold
+}
+
+#information p{
+    padding-left: 330px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: bold
+}
+.name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: rgba(40,37,35,0.8);
+    box-sizing: border-box;
+    padding: 0.5em 1em
+}
+
+section#sliderWrap .slick-prev,
+section#sliderWrap .slick-next { width:40px; height:40px }
+/*SLICK OPTION*/
+.slick-prev,
+.slick-next { top: 270px; z-index:1; width:20px; height:20px }
+.slick-prev { left:-5% }
+.slick-next { right:-5% }
+.slick-prev:before,
+.slick-next:before { font-family: "Font Awesome 6 Free"; font-weight:900; color:#FFF; font-size:20px }
+.slick-prev:before { content:"\f104" }
+.slick-next:before { content:"\f105" }
+
+section#sponsor { background:#FFF; padding:40px 10px }
+section#sponsor h2,
+
+section#sponsor ul {
+    width:100%;
+    max-width:1040px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap
+  }
+
+.footer {
+    width: 100%;
+    background-color: #d1cfc2;
+    text-align: center;
+    padding: 2em 0 3em
+}
+
+.footer .snstitle {
+    font-size: 1.5em;
+    color: #000000
+}
+
+.footer .sns {
+    width: 260px;
+    margin: 0.5em auto
+}
+
+.footer .sns img {
+    width: 55px;
+    margin: 0 10px
+}
+
+.footer .toppage p {
+    width: 90%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #d1cfc2;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    margin: 1em auto 2em
+}
+
+.footer .toppage p i {
+    padding-right: 0.5em
+}
+
+.footer .links {
+    text-align: center;
+    padding: 1em 0
+}
+
+.footer .links a {
+    font-size: 20px;
+    color: #000000 !important
+}
+
+.footer-logo img {
+    margin: 0 auto;
+    padding: 0.5em 0 0.2em;
+    text-align: center;
+    width:350px
+}
+
+.footer .copyright {
+    color: #000000;
+    font-size: 25px;
+    padding-top:2px;
+}
+footer p small {
+    font-size: 20px;
+    line-height: 5px;
+    color:#000000
+}
+
+.footer .address {
+    color: #000000;
+    font-size: 25px;
+    padding-top: 2px
+}
+.address p {
+    font-size: 20px;
+    line-height: 10px;
+    color:#000000
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding:1em 0
+    }
+
+    .footer .toppage {
+        display: none
+    }
+
+    .footer .links p {
+        display: inline;
+        font-size: 1.2em;
+        margin: 0 10px
+    }
+
+    .footer .logo {
+        width: 15%
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif
+}
+
+
+
+.maintitle {
+    text-align: center;
+    display: flex
+}
+
+.mainheadline {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #a1a499;
+    border-top: 1px #e5e5e5 solid
+}
+
+.mainheadline h2 {
+    font-size: 1em;
+    border-bottom: 1.5px solid #a1a499
+}
+
+.headline {
+    color: #C52929;
+    font-size: 25px;
+    padding-top: 25px;
+    display: inline-block
+}
+
+
+
+.selected {
+    color: #C52929
+}
+
+.selected h2 {
+    border-bottom: 1.5px solid #C52929
+}
+
+.rank .thumbnail {
+    position: relative
+}
+
+.rank .thumbnail .number {
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    background-color: #ffffff;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    font-size: 14px
+}
+
+.rank .thumbnail .rank1 {
+    background-color: #b09463
+}
+
+.rank .thumbnail .rank2 {
+    background-color: #808080
+}
+
+.rank .thumbnail .rank3 {
+    background-color: #976918
+}
+
+.articles .new_youtube {
+    background-color: beige
+}
+
+.articles .new_youtube .youtube_logo {
+    max-height: 14px;
+    width: auto;
+    float: right;
+    margin-right: 2vw
+}
+
+.articles .content {
+    width: 100%;
+    padding: 0.7em;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+    border-bottom: 1px #e5e5e5 solid;
+    font-size: 20px;
+    color: #282523;
+    display: flex;
+    align-items: center
+}
+
+.articles .content .content_right {
+    width: 55%;
+    float: left
+}
+
+.articles .content img {
+    width: 100%;
+    margin: 0.5em 0
+}
+
+.articles .content .thumbnail {
+    width: 45%;
+    display: block;
+    float: left
+}
+
+.articles .content .thumbnail img {
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+.articles .content .subtitle {
+    padding-left: 2vw;
+    box-sizing: border-box;
+    display: block;
+    color: #808080;
+    font-size: 40px
+}
+
+.articles .content .post_title {
+    padding-left: 2vw;
+    box-sizing: border-box;
+    display: block;
+    font-weight: bold
+}
+
+.articles .content .writer {
+    display: inline-block;
+    font-size: 1vw;
+    width: 100%;
+    padding-left: 2vw
+}
+
+.articles .content .writer .icon {
+    width: 2.5vw;
+    fill: #a1a499;
+    display: inline-block;
+    margin: 0 1vw 0 2.5vw
+}
+
+.articles .content .writer p {
+    display: inline-block;
+    color: #a1a499;
+    font-size: 2vw;
+    vertical-align: middle
+}
+
+.articles .more {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    margin: 10vw 0
+}
+
+.articles .more h2 {
+    padding: 5vw 10vw;
+    border-radius: 3vw;
+    color: #fff;
+    background-color: #C52929;
+    width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block
+}
+
+.articles .ad_in_article_list .ad_annotation {
+    padding: 1.6em;
+    display: flex;
+    color: gray;
+    font-size: 1.5vw;
+    align-items: center;
+    padding-top: 0em
+}
+
+.articles .ad_in_article_list .ad_annotation .pr {
+    background-color: #808080;
+    color: #FFFFFF;
+    padding-block:0.1em;padding-inline:0.6em;margin-right: 0.5em
+}
+
+.pagination {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 1.2em;
+    color: #282523;
+    position: relative
+}
+
+.pagination .list-pagination-wrapper {
+    padding: 26px 0
+}
+
+.pagination .pagination-hidden-tags {
+    visibility: hidden
+}
+
+.pagination .prev,.pagination .first {
+    float: left;
+    padding: 0 15px
+}
+
+.pagination .next,.pagination .last {
+    float: right;
+    padding: 0 15px
+}
+
+.pagination .page {
+    display: inline-block;
+    font-size: 0.9em;
+    left: 50%
+}
+
+.pagination .page.gap {
+    color: #8f9189
+}
+
+.pagination .page.box {
+    margin: 0 0.4em;
+    height: 2em;
+    width: 2em
+}
+
+.pagination .page.box:hover {
+    border-bottom: 2px solid #C52929;
+    color: #C52929
+}
+
+.pagination .page.current-box {
+    border-bottom: 2px solid #C52929
+}
+
+.pagination .page.current-box:hover {
+    color: inherit
+}
+
+.pagination a {
+    display: block;
+    color: #8f9189;
+    line-height: 2em
+}
+
+.pagination a:hover {
+    color: #C52929
+}
+
+.pagination .current {
+    font-weight: 700;
+    line-height: 2em
+}
+
+
+.right-column .events,.right-column .about,.right-column .partner-banner,.right-column .rank,.right-column .header--menu__tab,.right-column .header--menu__series,.right-column .links {
+    display: none
+}
+
+.banners {
+    display: none
+}
+
+@media screen and (min-width: 768px) {
+    .partner-banner {
+        display:none
+    }
+
+    .headline {
+        padding-top: 0;
+        font-size: 40px
+    }
+
+    .headline_sub {
+        font-size: 25px;
+        margin: 0.7em 0 1em
+    }
+
+    .main_top {
+        margin: 0 auto
+    }
+
+    .main_top .top {
+        visibility: hidden
+    }
+
+    .main_top .top--slider .content img {
+        width: 100%
+    }
+
+    .main_top .top--slider .content .post_name {
+        width: 100%;
+        height: 5em;
+        font-size: 0.9em
+    }
+
+    .main_top .top .dot-class li button:before {
+        width: 10px;
+        height: 10px
+    }
+
+    .main {
+        margin: 0 auto;
+        width: 100%
+    }
+
+    .main .maintitle .mainheadline {
+        width: 100%;
+        border-top: 0px;
+        height: 48px;
+        line-height: 48px
+    }
+
+    .main .maintitle .mainheadline h2 {
+        font-size: 1.3em
+    }
+    .main .maintitle .mainheadline {
+        width: 100%;
+        border-top: 0px;
+        height: 48px;
+        line-height: 48px
+    }
+
+    .main .maintitle .mainheadline h3 {
+        font-size: 1.3em
+    }
+    .main .left-column {
+        display: inline-block;
+        box-sizing: border-box;
+        float: left;
+        border-left: 1px #e5e5e5 solid;
+        border-right: 1px #e5e5e5 solid;
+        padding: 0 10px
+    }
+
+    .main .left-column .rank {
+        display: none
+    }
+
+    .main .left-column .mainheadline {
+        height: 60px;
+        line-height: 60px;
+        padding-bottom: 10px
+    }
+
+    .main .left-column .mainheadline h2 {
+        font-size: 40px;
+        padding-bottom: 10px
+    }
+
+    .main .left-column .articles .new_youtube .youtube_logo {
+        position: absolute;
+        right: 0;
+        bottom: 16px;
+        max-height: 22px
+    }
+
+    .main .left-column .articles .content {
+        padding: 15px 15px 10px
+    }
+
+    .main .left-column .articles .content .thumbnail {
+        width: 30%
+    }
+
+    .main .left-column .articles .content .thumbnail img {
+        vertical-align: top;
+        margin: 0
+    }
+
+    .main .left-column .articles .content .content_right {
+        width: 70%
+    }
+
+    .main .left-column .articles .content .subtitle {
+        padding-left: 14px;
+        font-size: 15px;
+        margin-bottom: 0
+    }
+
+    .main .left-column .articles .content .post_title {
+        padding-left: 14px;
+        margin-top: 0;
+        font-size: 20px
+    }
+
+    .main .left-column .articles .content .icon {
+        width: 12px;
+        margin: 0 5px 0 15px
+    }
+
+    .main .left-column .articles .content .writer {
+        padding-left: 0;
+        left: 32%;
+        bottom: 0
+    }
+
+    .main .left-column .articles .content p {
+        font-size: 12px;
+        vertical-align: baseline
+    }
+
+    .main .left-column .new .newbutton {
+        width: 100%;
+        border-top: 0px
+    }
+
+    .main .left-column .new .rankbutton {
+        display: none
+    }
+
+    .main .left-column .ad_in_article_list {
+        padding: 1em
+    }
+
+    .main .left-column .ad_in_article_list .ad_annotation {
+        font-size: 15px;
+        padding-left: 0em
+    }
+
+}
