@@ -139,8 +139,8 @@ header nav {
 
     display: none;
     width: 100%;
-    height: 85%;
-    background: #fff1f1;
+    height: 100%;
+    background: #cfe2fe;
     opacity: 0.9;
     /* 3. スライドメニューの場合 */
     display: block;
@@ -241,13 +241,11 @@ main h2 span {
 #information ul li {
     padding: 5px 10px;
 }
-#information ul li:nth-child(even) {
-    background-color: #ffffff;
-}
+
 #information ul li time {
     display: block;
     margin: 30px;
-    font-size: 20px;
+    font-size: 15px;
 }
 #information ul li p {
     line-height: 1.5;
@@ -255,29 +253,29 @@ main h2 span {
 #information ul li p::before {
     content: "▶︎";
     margin-right: 5px;
-    font-size: 20px;
+    font-size: 15px;
     vertical-align: top;
 }
 #information ul li p {
-    font-size: 40px;
+    font-size: 25px;
 
 }
 
 
 #information img{
-    width: 320px;
+    width: 250px;
     display: block;
     float: left
 }
 #information time{
-    padding-left: 330px;
+    padding-left: 300px;
     box-sizing: border-box;
     display: block;
     font-weight: bold
 }
 
 #information p{
-    padding-left: 330px;
+    padding-left: 300px;
     box-sizing: border-box;
     display: block;
     font-weight: bold
@@ -743,10 +741,11 @@ footer p small {
         border-top: 0px;
         height: 48px;
         line-height: 48px
+        
     }
 
     .main .maintitle .mainheadline h2 {
-        font-size: 1.3em
+        font-size: 20px
     }
     .main .maintitle .mainheadline {
         width: 100%;

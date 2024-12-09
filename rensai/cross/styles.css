@@ -1,0 +1,106 @@
+/* 基本設定 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.quiz-container h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #666;
+}
+
+input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 80%;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003f7f;
+}
+
+/* 結果メッセージのスタイル */
+#result-message {
+  margin-top: 20px;
+}
+
+.correct {
+  color: #28a745;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: #dc3545;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+.quiz-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+}
+

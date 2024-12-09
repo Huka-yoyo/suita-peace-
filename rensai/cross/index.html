@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クイズフォーム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>次のクロスワードの答えを入力してください</h2>
+    <!-- 画像を表示 -->
+    <img src="cros.png" alt="クロスワード問題" class="quiz-image">
+    <form id="answer-form">
+      <label for="answer-input">解答：</label>
+      <input type="text" id="answer-input" name="answer" maxlength="8" placeholder="答えを入力" required>
+      <button type="submit">送信</button>
+    </form>
+    <div id="result-message">
+      <p class="correct hidden">正解です！</p>
+      <p class="incorrect hidden">不正解です。もう一度試してください。</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
